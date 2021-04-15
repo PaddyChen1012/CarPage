@@ -5,9 +5,243 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Custom.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+        .new:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 60px 60px 0 0;
+            border-color: rgba(255,0,0,1) transparent transparent transparent;
+        }
+        .new:after {
+            content: 'New';
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg,rgba(255,255,255,1) 50%,rgba(255,0,0,1) 50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
 <body>
-    
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="newCar.html" tabindex="-1" aria-disabled="true">รถปี๊กอัพใหม่</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="oldCar.html" tabindex="-1" aria-disabled="true">รถปิ๊กอัพเก่า</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html" tabindex="-1" aria-disabled="true">สอบถามข้อมูล</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row mx-auto w-100">
+            <div class="col-12 col-md-2 mb-5">
+                <div class="card position-fixed label">
+                    <div class="card-header">
+                        廠牌
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">MG</li>
+                      <li class="list-group-item">Mazda</li>
+                    </ul>
+                  </div>
+            </div>
+            
+            <div class="col-12 col-md-10">
+
+                <!-- Car card Start -->
+                <div class="card new flex-column overflow-hidden flex-md-row mb-2 shadow">
+                    <img src="images/mg-extender.jpg" class="img-fluid h-100" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <div class="card-text h3 text-primary ellipsis">MG EXTENDER</div>
+                        <div class="card-text text-danger h5 mb-1">559,000 - 1,039,000 บาท</div>
+                        <div class="card-text d-flex flex-wrap align-items-center h7 mb-2">เริ่มต้น<div class="text-danger h6 mb-0 mx-1">4,396 บาท</div>/เดือน<button type="button" class="btn btn-outline-primary d-flex align-items-center h7 py-0 ml-1">คำนวณค่างวด<ion-icon class="ml-1" name="chevron-forward-sharp"></ion-icon></button></div>
+                        <div class="table bg-light rounded shadow">
+                            <div class="thead ">
+                                <div class="tr d-flex">
+                                    <div class="th col col-md-3 text-center py-1 border-bottom">รุ่นย่อย</div>
+                                    <div class="th col text-center py-1 border-bottom">ราคา</div>
+                                    <div class="th col text-center py-1 border-bottom">ประเภท</div>
+                                    <div class="th col text-center py-1 border-bottom">เกียร์</div>
+                                    <div class="th col text-center py-1 border-bottom">เชื้อเพลิง</div>
+                                </div>
+                            </div>
+                            <div class="tbody">
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">MG EXTENDER</div><div class="h7">2.0 Giant Cab C 6MT</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">559,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ธรรมดา</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">MG EXTENDER</div><div class="h7">2.0 Double Cab Grand X 6AT</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">889,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ออโต้</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">MG EXTENDER</div><div class="h7">2.0 Double Cab Grand 4WD X 6AT</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">1,039,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ออโต้</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary ml-auto">ดูรายละเอียดรุ่นรถยนต์<span class="d-block h7">ราคา, โปรโมชั่น, รูปภาพ และอื่นๆ</span></button>
+                    </div>
+                </div>
+                <!-- Car card end -->
+
+                <div class="card new flex-column overflow-hidden flex-md-row mb-2 shadow">
+                    <img src="images/mazda-double.jpg" class="img-fluid h-100" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <div class="card-text h3 text-primary ellipsis">Mazda BT-50 Double Cab</div>
+                        <div class="card-text text-danger h5 mb-1">771,000 - 1,153,000 บาท</div>
+                        <div class="card-text d-flex flex-wrap align-items-center h7 mb-2">เริ่มต้น<div class="text-danger h6 mb-0 mx-1">6,064 บาท</div>/เดือน<button type="button" class="btn btn-outline-primary d-flex align-items-center h7 py-0 ml-1">คำนวณค่างวด<ion-icon class="ml-1" name="chevron-forward-sharp"></ion-icon></button></div>
+                        <div class="table bg-light rounded shadow">
+                            <div class="thead ">
+                                <div class="tr d-flex">
+                                    <div class="th col col-md-3 text-center py-1 border-bottom">รุ่นย่อย</div>
+                                    <div class="th col text-center py-1 border-bottom">ราคา</div>
+                                    <div class="th col text-center py-1 border-bottom">ประเภท</div>
+                                    <div class="th col text-center py-1 border-bottom">เกียร์</div>
+                                    <div class="th col text-center py-1 border-bottom">เชื้อเพลิง</div>
+                                </div>
+                            </div>
+                            <div class="tbody">
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">Mazda BT-50 Double Cab</div><div class="h7">1.9C</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">771,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ธรรมดา</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">Mazda BT-50 Double Cab</div><div class="h7">1.9S HI-RACER 6AT</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">936,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ออโต้</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">Mazda BT-50 Double Cab</div><div class="h7">3.0SP HI-RACER 6AT</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">1,153,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ออโต้</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary ml-auto">ดูรายละเอียดรุ่นรถยนต์<span class="d-block h7">ราคา, โปรโมชั่น, รูปภาพ และอื่นๆ</span></button>
+                    </div>
+                </div>
+
+                <div class="card new flex-column overflow-hidden flex-md-row mb-2 shadow">
+                    <img src="images/mazda-freestyle.jpg" class="img-fluid h-100" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <div class="card-text h3 text-primary ellipsis">Mazda BT-50 Freestyle Cab</div>
+                        <div class="card-text text-danger h5 mb-1">679,000 - 832,000 บาท</div>
+                        <div class="card-text d-flex flex-wrap align-items-center h7 mb-2">เริ่มต้น<div class="text-danger h6 mb-0 mx-1">5,340 บาท</div>/เดือน<button type="button" class="btn btn-outline-primary d-flex align-items-center h7 py-0 ml-1">คำนวณค่างวด<ion-icon class="ml-1" name="chevron-forward-sharp"></ion-icon></button></div>
+                        <div class="table bg-light rounded shadow">
+                            <div class="thead ">
+                                <div class="tr d-flex">
+                                    <div class="th col col-md-3 text-center py-1 border-bottom">รุ่นย่อย</div>
+                                    <div class="th col text-center py-1 border-bottom">ราคา</div>
+                                    <div class="th col text-center py-1 border-bottom">ประเภท</div>
+                                    <div class="th col text-center py-1 border-bottom">เกียร์</div>
+                                    <div class="th col text-center py-1 border-bottom">เชื้อเพลิง</div>
+                                </div>
+                            </div>
+                            <div class="tbody">
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">Mazda BT-50 Freestyle Cab</div><div class="h7">1.9C</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">679,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ธรรมดา</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">Mazda BT-50 Freestyle Cab</div><div class="h7">1.9S HI-RACER 6AT</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">832,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ออโต้</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary ml-auto">ดูรายละเอียดรุ่นรถยนต์<span class="d-block h7">ราคา, โปรโมชั่น, รูปภาพ และอื่นๆ</span></button>
+                    </div>
+                </div>
+
+                <div class="card new flex-column overflow-hidden flex-md-row mb-2 shadow">
+                    <img src="images/mazda-standard.jpg" class="img-fluid h-100" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <div class="card-text h3 text-primary ellipsis">Mazda BT-50 Standard Cab</div>
+                        <div class="card-text text-danger h5 mb-1">553,000 บาท</div>
+                        <div class="card-text d-flex flex-wrap align-items-center h7 mb-2">เริ่มต้น<div class="text-danger h6 mb-0 mx-1">4,349 บาท</div>/เดือน<button type="button" class="btn btn-outline-primary d-flex align-items-center h7 py-0 ml-1">คำนวณค่างวด<ion-icon class="ml-1" name="chevron-forward-sharp"></ion-icon></button></div>
+                        <div class="table bg-light rounded shadow">
+                            <div class="thead ">
+                                <div class="tr d-flex">
+                                    <div class="th col col-md-3 text-center py-1 border-bottom">รุ่นย่อย</div>
+                                    <div class="th col text-center py-1 border-bottom">ราคา</div>
+                                    <div class="th col text-center py-1 border-bottom">ประเภท</div>
+                                    <div class="th col text-center py-1 border-bottom">เกียร์</div>
+                                    <div class="th col text-center py-1 border-bottom">เชื้อเพลิง</div>
+                                </div>
+                            </div>
+                            <div class="tbody">
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">Mazda BT-50 Standard Cab</div><div class="h7">1.9E</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">553,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ธรรมดา</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                                <div class="tr d-flex  flex-column flex-md-row">
+                                    <div data-thead="รุ่นย่อย" class="td col col-md-3 d-flex justify-content-start py-1 border-bottom"><div><div class="h8 text-black-50">Mazda BT-50 Standard Cab</div><div class="h7">1.9S HI-RACER 6AT</div></div></div>
+                                    <div data-thead="ราคา" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">832,000</div>
+                                    <div data-thead="ประเภท" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">รถกระบะ</div>
+                                    <div data-thead="เกียร์" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เกียร์ออโต้</div>
+                                    <div data-thead="เชื้อเพลิง" class="td col text-center d-flex align-items-center justify-content-md-center py-1 border-bottom">เบนซิน</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary ml-auto">ดูรายละเอียดรุ่นรถยนต์<span class="d-block h7">ราคา, โปรโมชั่น, รูปภาพ และอื่นๆ</span></button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

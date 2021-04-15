@@ -5,8 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Custom.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="newCar.html" tabindex="-1" aria-disabled="true">รถปี๊กอัพใหม่</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="oldCar.html" tabindex="-1" aria-disabled="true">รถปี๊กอัพใหม่</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html" tabindex="-1" aria-disabled="true">สอบถามข้อมูล</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <form class="d-flex flex-column w-100 p-5 mt-5 bg-light rounded shadow">
+            <div class="h1 text-center text-bo">สอบถามข้อมูล</div>
+            <div class="input-group flex-column">
+                <label for="data_name">โทรศัพท์: </label>
+                <input class="" type="text" placeholder="" id="data_name">
+            </div>
+            <div class="input-group flex-column">
+                <label for="data_phone">เบอร์โทร: </label>
+                <input class="" type="text" placeholder="" id="data_phone">
+            </div>
+            <div class="input-group flex-column">
+                <label for="data_mail">อีเมล: </label>
+                <input class="" type="text" placeholder="" id="data_mail">
+            </div>
+            <div class="input-group flex-column">
+                <label for="data_question">สอบถามข้อมูล: </label>
+                <textarea class="" rows="6" type="text" placeholder="" id="data_question"></textarea>
+            </div>
+            <button type="button" id="submit" class="btn btn-primary mt-3 ml-auto">SEND</button>
+        </form>
+    </div>
+
     
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        $(function() {
+          $('#submit').on('click', function() {
+            
+            // 姓名
+            var name = $('#data_name').val() || '未填寫';
+    
+            // 電話
+            var phone = $('#data_phone').val() || '未填寫';
+    
+            // 電子郵件
+            var mail = $('#data_mail').val() || '未填寫';
+    
+            // 詢問事項
+            var question = $('#data_question').val() || '未填寫';
+    
+            // post
+            var data = {
+              'entry.175725716': name,
+              'entry.1399368539': phone,
+              'entry.813199824': mail,
+              'entry.474079260': question,
+            };
+            $.ajax({
+              type: 'POST',
+              url: 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSeSSyy8Xjy9ZSCcrmWsOT08WWmbXcpR-b3ounvIDQ6vS3GpOA/formResponse',
+              data: data,
+              contentType: 'application/json',
+              dataType: 'jsonp',
+              complete: function() {
+                alert('ส่งข้อมูลแล้ว！');
+              }
+            });
+            
+          });
+        });
+    </script>
 </body>
 </html>
